@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3FBCDA9-1C65-4B25-A82B-E21E69C473C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppWindowsForms</RootNamespace>
+    <AssemblyName>AppWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Frm_Principal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formulários 1\Frm_FormataVlr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_FormataVlr.Designer.cs">
+      <DependentUpon>Frm_FormataVlr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ArquivoImagem_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ArquivoImagem_UC.Designer.cs">
+      <DependentUpon>Frm_ArquivoImagem_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_FormataVlr_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_FormataVlr_UC.Designer.cs">
+      <DependentUpon>Frm_FormataVlr_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_Questao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_Questao.Designer.cs">
+      <DependentUpon>Frm_Questao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaCPF_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaCPF_UC.Designer.cs">
+      <DependentUpon>Frm_ValidaCPF_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaCPF2_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaCPF2_UC.Designer.cs">
+      <DependentUpon>Frm_ValidaCPF2_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaCPF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaCPF.Designer.cs">
+      <DependentUpon>Frm_ValidaCPF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaCPF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaCPF2.Designer.cs">
+      <DependentUpon>Frm_ValidaCPF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários 1\Frm_ValidaSenha.Designer.cs">
+      <DependentUpon>Frm_ValidaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CadastroCliente_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm_CadastroCliente_UC.designer.cs">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal_Menu_UC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal_Menu_UC.Designer.cs">
+      <DependentUpon>Frm_Principal_Menu_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaSenha_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários 2\Frm_ValidaSenha_UC.Designer.cs">
+      <DependentUpon>Frm_ValidaSenha_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários 1\Frm_FormataVlr.resx">
+      <DependentUpon>Frm_FormataVlr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_ArquivoImagem_UC.resx">
+      <DependentUpon>Frm_ArquivoImagem_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_FormataVlr_UC.resx">
+      <DependentUpon>Frm_FormataVlr_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 1\Frm_ValidaCPF.resx">
+      <DependentUpon>Frm_ValidaCPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 1\Frm_ValidaCPF2.resx">
+      <DependentUpon>Frm_ValidaCPF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 1\Frm_ValidaSenha.resx">
+      <DependentUpon>Frm_ValidaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CadastroCliente_UC.resx">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal_Menu_UC.resx">
+      <DependentUpon>Frm_Principal_Menu_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_Questao.resx">
+      <DependentUpon>Frm_Questao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_ValidaCPF_UC.resx">
+      <DependentUpon>Frm_ValidaCPF_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_ValidaCPF2_UC.resx">
+      <DependentUpon>Frm_ValidaCPF2_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários 2\Frm_ValidaSenha_UC.resx">
+      <DependentUpon>Frm_ValidaSenha_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Frm_Principal.ico" />
+    <Content Include="Imagens\Cadastros.png" />
+    <Content Include="Imagens\DeleteAll.png" />
+    <Content Include="Imagens\DeleteLeft.png" />
+    <Content Include="Imagens\DeleteRight.png" />
+    <Content Include="Imagens\DeleteTab.png" />
+    <Content Include="Imagens\ExcluirBarra.png" />
+    <Content Include="Imagens\Frm_DemonstracaoKey.ico" />
+    <Content Include="Imagens\Frm_DemonstracaoKey.png" />
+    <Content Include="Imagens\Frm_HelloWorld.ico" />
+    <Content Include="Imagens\Frm_HelloWorld.png" />
+    <Content Include="Imagens\Frm_Mascara.ico" />
+    <Content Include="Imagens\Frm_Mascara.png" />
+    <Content Include="Imagens\Frm_Principal.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF.png" />
+    <Content Include="Imagens\Frm_ValidaCPF2.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF2.png" />
+    <Content Include="Imagens\Frm_ValidaSenha.ico" />
+    <Content Include="Imagens\Frm_ValidaSenha.png" />
+    <Content Include="Imagens\icons8-question-mark-96.ico" />
+    <Content Include="Imagens\icons8-question-mark-96.png" />
+    <Content Include="Imagens\key.png" />
+    <Content Include="Imagens\LimparBarra.png" />
+    <Content Include="Imagens\money.png" />
+    <Content Include="Imagens\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CursoWindowsFormsBiblioteca\Bibliotecas.csproj">
+      <Project>{d619deb3-f971-4c2d-97a3-f62e9d5681ac}</Project>
+      <Name>Bibliotecas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
