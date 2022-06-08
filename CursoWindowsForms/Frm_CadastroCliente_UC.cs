@@ -4,6 +4,7 @@ using Bibliotecas.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
 using CursoWindowsFormsBiblioteca;
+using Bibliotecas.Classes.Database;
 
 namespace CursoWindowsForms
 {
@@ -73,6 +74,26 @@ namespace CursoWindowsForms
 
         }
 
+        private void LimparFormulario()
+        {
+            Txt_Codigo.Text = "";
+            Txt_CEP.Text = "";
+            Txt_Bairro.Text = "";
+            Txt_Complemento.Text = "";
+            Txt_CPF.Text = "";
+            Cmb_Estados.SelectedIndex = -1;
+            Txt_Logradouro.Text = "";
+            Txt_NomeCliente.Text = "";
+            Txt_NomeMae.Text = "";
+            Txt_NomePai.Text = "";
+            Txt_Profissao.Text = "";
+            Txt_RendaFamiliar.Text = "";
+            Txt_Telefone.Text = "";
+            Txt_Cidade.Text = "";
+            Chk_TemPai.Checked = false;
+            Rdb_Masculino.Checked = true;
+        }
+
         private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
         {
             if (Chk_TemPai.Checked)
@@ -95,7 +116,18 @@ namespace CursoWindowsForms
                 CU = LeituraFormulario();
                 CU.ValidaClasse();
                 CU.ValidaComplemento();
-                MessageBox.Show("SUCESSO");
+                string clienteJson = Cliente.SerializedClassUnit(CU);
+                ArquivoJson AJ = new ArquivoJson("C:\\Users\\Guilherme\\Pictures\\WinForms_SQL\\ArquivosJson");  //cria um diretório para guardar o arquivo json que salva o formulário
+                if (AJ.status)
+                {
+                    AJ.Incluir(CU.Id, clienteJson);
+                    MessageBox.Show("OK: " + AJ.mensagem);
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: " + AJ.mensagem);
+                }
+                
             }
             catch(ValidationException Ex)
             {
@@ -124,7 +156,8 @@ namespace CursoWindowsForms
 
         private void LimpartoolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
+            LimparFormulario();
+            MessageBox.Show("Formulário limpo");
         }
 
         Cliente.Unit LeituraFormulario()

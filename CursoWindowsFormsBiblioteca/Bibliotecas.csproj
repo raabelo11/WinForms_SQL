@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cep.cs" />
     <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Database\ArquivoJson.cs" />
     <Compile Include="Cls_Uteis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

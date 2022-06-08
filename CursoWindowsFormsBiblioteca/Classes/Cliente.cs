@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using CursoWindowsFormsBiblioteca;
+using Newtonsoft.Json;
 
 namespace Bibliotecas.Classes
 {
@@ -124,6 +125,17 @@ namespace Bibliotecas.Classes
         {
             public List<Unit> ListUnit { get; set; }
         }
+
+        public static Unit DesSerializedClassUnit(string vJson) //joga o formato json na classe C#.
+        {
+            return JsonConvert.DeserializeObject<Unit>(vJson);
+        }
+
+        public static string SerializedClassUnit(Unit unit) 
+        {
+            return JsonConvert.SerializeObject(unit);  // transforma classe em json
+        }
+
 
     }
 }
